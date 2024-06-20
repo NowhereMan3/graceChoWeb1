@@ -30,3 +30,6 @@ fetch("geojson/tartu_city_celltowers_edu.geojson")
     .then(function(data) {
         L.geoJson(data).addTo(map);
     })
+    .catch(function(error) {
+        console.log(`This is the error: ${error}`)
+    })
