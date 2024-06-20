@@ -22,3 +22,8 @@ function defaultMapSettings() {
  map.setView([58.373523, 26.716045], 12)
 }
 
+
+fetch("geojson/tartu_city_celltowers_edu.geojson")
+    .then(function(response) {
+        return response.json()
+    })
