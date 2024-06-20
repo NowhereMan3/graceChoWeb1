@@ -13,25 +13,10 @@ function defaultMapSettings() {
 }
 
 
-fetch("geojson/tartu_city_celltowers_edu.geojson")
-    .then(function(response) {
-        return response.json()
-    })
-    .then(function(data) {
-        L.geoJson(data).addTo(map);
-    })
-    .then(function(markers){
-        L.geoJson(data)
-        marker.addTo(map)
-    })
-    .catch(function(error) {
-        console.log(`This is the error: ${error}`)
-    })
-
-
-geoJson2heat = ((geojson) => {
-        return geojson.features.map(function(feature) {
-        return [parseFloat(feature.geometry.coordinates[1]), 
-                parseFloat(feature.geometry.coordinates[0])];
-        });
-        });
+addGeoJson('geojson/tartu_city_celltowers_edu.geojson')
+// add geoJSON layer
+async function addGeoJson(url) {
+ const response = await fetch(url)
+ const data = await response.json()
+ console.log(data.features[0]) 
+}
