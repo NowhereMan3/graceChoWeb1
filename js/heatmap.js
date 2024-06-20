@@ -27,3 +27,6 @@ fetch("geojson/tartu_city_celltowers_edu.geojson")
     .then(function(response) {
         return response.json()
     })
+    .then(function(data) {
+        L.geoJson(data).addTo(map);
+    })
