@@ -7,12 +7,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 osm.addTo(map)
 
 
-// default map settings
-function defaultMapSettings() {
- map.setView([58.373523, 26.716045], 12)
-}
-
-
 addGeoJson('geojson/tartu_city_districts_edu.geojson')
 // add geoJSON layer
 async function addGeoJson(url) {
