@@ -1,55 +1,46 @@
 <!DOCTYPE html>
 <html>
- <head>
- <meta charset="utf-8" />
- <link rel="stylesheet" href="css/mystyle.css"> 
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-
- <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
- <title>My test page</title>
- </head>
- <body>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/mystyle.css"> 
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+  <title>Choropleth Map</title>
+</head>
+<body>
   <div class="banner">
-  <img src="img/grace_1.jpg" alt="Host Image"/>
+    <img src="img/grace_1.jpg" alt="Host Image"/>
   </div>
- <h2>Grace Cho</h2>
- <h3>GIS Professional</h3>
- <div>Master student</div>
- <div>Geoinformatics for urbanised society University of Tartu</div>
+  <h2>Grace Cho</h2>
+  <h3>GIS Professional</h3>
+  <div>Master student</div>
+  <div>Geoinformatics for urbanised society University of Tartu</div>
 
-    <nav>
- 
+  <nav>
     <a href="index.html">Basic Map</a>
-    <a href="choroplethmap.html" class="active">ChoroplethMap</a>
-	    <a href="heatmap.html">Heat Map</a>
-    
-	    
-	    
-    </nav>
+    <a href="heatmap.html">Heat Map</a>
+    <a href="choroplethmap.html" class="active">Choropleth Map</a>
+  </nav>
 	
-	<!-- Title -->
-    <div class="title">
-        <h1>ChoroplethMap</h1>
-    </div>
-	<div id="map"></div> <!-- Map container -->
- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
- <script src="https://cdn.jsdelivr.net/npm/leaflet-choropleth@1.1.4/dist/choropleth.js"></script>
-
-<script src="js/choroplethmap.js"></script>
-
-	 
-<button onclick="defaultMapSettings()">Default</button>
-
-	 
-<div class="hero-image">
- <img src="img/photographer.jpg" alt="Hero Image"/>
-  <div class="hero-text">
-    <h4>I am John Doe</h4>
-    <p>And I'm a Photographer</p>
-    <button>Hire me</button>
+  <div class="title">
+    <h1>Choropleth Map</h1>
   </div>
-</div>
 
-  
- </body>
+  <div id="map"></div> <!-- Map container -->
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-choropleth@1.1.4/dist/choropleth.js"></script>
+  <script src="js/choroplethmap.js"></script>
+
+  <button onclick="defaultMapSettings()">Default</button>
+
+  <div class="hero-image">
+    <img src="img/photographer.jpg" alt="Hero Image"/>
+    <div class="hero-text">
+      <h4>I am John Doe</h4>
+      <p>And I'm a Photographer</p>
+      <button>Hire me</button>
+    </div>
+  </div>
+</body>
 </html>
